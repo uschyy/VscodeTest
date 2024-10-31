@@ -1,0 +1,15 @@
+1.在新的文件中使用git init完成本地仓库初始化
+2.初始化要发送的对象
+    git config --global user.name  "xxx"   (xxx为github的用户名)
+    git config --global user.email "xxx"   (xxx为你注册github的qq邮箱)
+3.生成ssh密钥,一直回车即可
+    ssh-keygen -t rsa -C "xxx"             (xxx为你注册github的qq邮箱)
+4.在ssh-agent上注册ssh密钥
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa
+    ssh-add -l
+5.打开密钥位置中的id_rsa.pub文件,复制里面的内容
+6.打开你的github,点击头像中setting中的ssh and GPGG Keys,点击Add SSH Key将你复制的密钥复制进去
+7.本地仓库连接远程仓库,选择"远程"-"添加远程仓库",在顶部弹出的窗口,粘贴目标仓库的ssh网站
+8.可以使用功能
+    "克隆" 在本地文件的终端中: git clone "xxx" (xxx为仓库的ssh网站)
