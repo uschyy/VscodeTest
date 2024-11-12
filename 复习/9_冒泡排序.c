@@ -11,7 +11,8 @@ void print(int *arr, int len)
     冒泡排序：
         从第一个数开始，两两比较
 */
-void BubbleSort(int *arr, int len)
+
+void BubbleSort(int *arr, int len) // 从小到大
 {
     for (int i = 1; i < len; i++)
     {
@@ -28,10 +29,10 @@ void BubbleSort(int *arr, int len)
 }
 int main(int argc, char const *argv[])
 {
-    int arr[5] = {5, 4, 3, 2, 1};
+    int arr[6] = {6, 4, 5, 3, 1, 2};
 
     // 冒泡排序
     printf("冒泡排序:");
-    BubbleSort(arr, 5);
-    print(arr, 5);
+    BubbleSort(arr, 6);
+    print(arr, 6);
 }

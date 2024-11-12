@@ -23,6 +23,14 @@ public:
     {
         cout << "y:" << y << "x:" << x << endl;
     }
+    int pr(int x, int y)
+    {
+        cout << "pr--int" << endl;
+    }
+    float pr(float, float)
+    {
+        cout << "pr--float" << endl;
+    }
 };
 class C : virtual public A
 {
@@ -50,8 +58,11 @@ public:
 };
 int main()
 {
-    D d(1, 2, 3);
-    d.print_D();
+    // D d(1, 2, 3);
+    // d.print_D();
+    B b(1, 2);
+    b.pr(1, 2);
+    b.pr((float)1.0, (float)3.0);
 }
 
 // class A
