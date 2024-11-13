@@ -24,7 +24,7 @@ void QuickSort(int *arr, int left, int right)
 {
     int L = left;
     int R = right;
-    if (L >= R)
+    if (L >= R) // 递归结束条件
     {
         return;
     }
